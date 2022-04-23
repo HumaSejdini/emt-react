@@ -1,0 +1,56 @@
+import React from "react";
+
+const categories = (props) => {
+    return(
+        <div className={"container mm-4 mt-5"}>
+            <div className={"row"}>
+                <div className={"row"}>
+                    <table className={"table table-striped"}>
+                        <thead>
+                        <tr>
+                            <th scope={"col"}>Name</th>
+                            <th scope={"col"}> Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {/*//evalurianje ke se pristapi do vrednosta na manufacturers,zagradite se vazni*/}
+                        {props.categories.map((term)=>{
+                            return (
+                                <tr key={term.id}>
+                                    <td>{term.name}</td>
+                                    <td>{term.description}</td>
+                                </tr>
+                            )
+                        })}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    )
+    // return (
+    //     <div className={"container mm-4 mt-5"}>
+    //         <div className={"row"}>
+    //             <div className={"row"}>
+    //                 <table className={"table table-striped"}>
+    //                     <thead>
+    //                     <tr>
+    //                         <th scope={"col"}>Category</th>
+    //                     </tr>
+    //                     </thead>
+    //                     <tbody>
+    //                     {/*{props.categories.map((term)=>{*/}
+    //                     {/*    return(*/}
+    //                     {/*        <tr>*/}
+    //                     {/*            <td>{term.categories}</td>*/}
+    //                     {/*        </tr>*/}
+    //                     {/*    );*/}
+    //                     {/*})}*/}
+    //                     </tbody>
+    //                 </table>
+    //             </div>
+    //         </div>
+    //     </div>
+    // )
+}
+export default categories;
